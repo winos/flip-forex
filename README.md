@@ -14,4 +14,4 @@ python3 flip.py GBP/USD
 Replace `GBP/USD` with any other currency pair you wish to analyze (e.g., `AUD/USD`).
 
 ## Output
-The script will generate and save a plot in the `./public/` directory. The file will be named based on the currency pair and the current date, following this pattern: `<CURRENCY_PAIR>_<DATE>_plot.png`.
+The script will generate and save a plot in the `./public/` directory. The file will be named based on the currency pair and the current date, following this pattern: `<CURRENCY_PAIR>_<DATE>.png`.
