@@ -1,0 +1,112 @@
+//@version=5
+indicator("Mi Indicador", overlay=true)
+
+// values
+
+v0=1.09732
+v1=1.09830
+v2=1.09845
+v3=1.09760
+v4=1.09684
+v5=1.09747
+v6=1.09767
+v7=1.09727
+v8=1.09850
+v9=1.09847
+v10=1.09766
+v11=1.09745
+v12=1.09898
+v13=1.09845
+v14=1.10013
+v15=1.10020
+v16=1.10024
+v17=1.09985
+v18=1.10066
+v19=1.10060
+v20=1.10058
+v21=1.10041
+v22=1.09924
+
+
+
+// Crear la serie personalizada
+miSeriePersonalizada(index) =>
+    float value = na
+    if (index == 0)
+        value := v0
+    if (index == 1)
+        value := v1
+    if (index == 2)
+        value := v2
+    if (index == 3)
+        value := v3
+    if (index == 4)
+        value := v4
+    if (index == 5)
+        value := v5
+    if (index == 6)
+        value := v6
+    if (index == 7)
+        value := v7
+    if (index == 8)
+        value := v8
+    if (index == 9)
+        value := v9
+    if (index == 10)
+        value := v10
+    if (index == 11)
+        value := v11
+    if (index == 12)
+        value := v12
+    if (index == 13)
+        value := v13
+    if (index == 14)
+        value := v14
+    if (index == 15)
+        value := v15
+    if (index == 16)
+        value := v16
+    if (index == 17)
+        value := v17
+    if (index == 18)
+        value := v18
+    if (index == 19)
+        value := v19
+    if (index == 20)
+        value := v20
+    if (index == 21)
+        value := v21
+    if (index == 22)
+        value := v22
+    value
+
+// Índice donde quieres trazar el círculo
+indiceDeseado = bar_index + 10
+
+// Obtener el valor correspondiente al índice deseado
+valorEnIndiceDeseado =  miSeriePersonalizada(1) //bar_index > 9 ? miSeriePersonalizada(1) : na
+
+// Trazar el círculo solo en el índice deseado
+//plot(valorEnIndiceDeseado, title = "test",linewidth = 2, style=plot.style_circles, offset=10, show_last = 1)
+plot(miSeriePersonalizada(0), title = "test",linewidth = 2, style=plot.style_circles, offset=1, show_last = 1)
+plot(miSeriePersonalizada(1), title = "test",linewidth = 2, style=plot.style_circles, offset=2, show_last = 1)
+plot(miSeriePersonalizada(2), title = "test",linewidth = 2, style=plot.style_circles, offset=3, show_last = 1)
+plot(miSeriePersonalizada(3), title = "test",linewidth = 2, style=plot.style_circles, offset=4, show_last = 1)
+plot(miSeriePersonalizada(4), title = "test",linewidth = 2, style=plot.style_circles, offset=5, show_last = 1)
+plot(miSeriePersonalizada(5), title = "test",linewidth = 2, style=plot.style_line, offset=6, show_last = 1)
+plot(miSeriePersonalizada(6), title = "test",linewidth = 1, style=plot.style_line, offset=7, show_last = 1)
+plot(miSeriePersonalizada(7), title = "test",linewidth = 2, style=plot.style_circles, offset=8, show_last = 1)
+plot(miSeriePersonalizada(8), title = "test",linewidth = 2, style=plot.style_circles, offset=9, show_last = 1)
+plot(miSeriePersonalizada(9), title = "test",linewidth = 2, style=plot.style_circles, offset=10, show_last = 1)
+plot(miSeriePersonalizada(10), title = "test",linewidth = 2, style=plot.style_circles, offset=11, show_last = 1)
+plot(miSeriePersonalizada(11), title = "test",linewidth = 2, style=plot.style_circles, offset=12, show_last = 1)
+plot(miSeriePersonalizada(12), title = "test",linewidth = 2, style=plot.style_circles, offset=13, show_last = 1)
+plot(miSeriePersonalizada(13), title = "test",linewidth = 2, style=plot.style_circles, offset=14, show_last = 1)
+plot(miSeriePersonalizada(14), title = "test",linewidth = 2, style=plot.style_circles, offset=15, show_last = 1)
+plot(miSeriePersonalizada(15), title = "test",linewidth = 2, style=plot.style_circles, offset=16, show_last = 1)
+plot(miSeriePersonalizada(16), title = "test",linewidth = 2, style=plot.style_circles, offset=17, show_last = 1)
+plot(miSeriePersonalizada(17), title = "test",linewidth = 2, style=plot.style_circles, offset=18, show_last = 1)
+plot(miSeriePersonalizada(18), title = "test",linewidth = 2, style=plot.style_circles, offset=19, show_last = 1)
+plot(miSeriePersonalizada(19), title = "test",linewidth = 2, style=plot.style_circles, offset=20, show_last = 1)
+plot(miSeriePersonalizada(20), title = "test",linewidth = 2, style=plot.style_circles, offset=21, show_last = 1)
+plot(miSeriePersonalizada(21), title = "test",linewidth = 2, style=plot.style_circles, offset=22, show_last = 1)
