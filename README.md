@@ -2,7 +2,8 @@
 # flip-forex
 
 ## Overview
-`flip-forex` is a Python script designed to analyze and visualize the price data of currency pairs. The script fetches the latest hourly data, inverts the DataFrame, and generates a side-by-side comparison plot for better analysis. The output is saved as an image file with the currency pair and the current date in the filename.
+`flip-forex` is a Python script designed to analyze and visualize the price data of currency pairs. The script fetches the latest hourly data, inverts the DataFrame, and generates a side-by-side comparison plot for better analysis. Like a path prediction.
+The output is saved as an image file with the currency pair and the current date in the filename.
 
 ## How to Execute
 To run the script, you need to pass the symbol of the currency pair you want to analyze as an argument. For example:
