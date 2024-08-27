@@ -36,6 +36,23 @@ def invertir_dataframe(df):
 
 base = invertir_dataframe(base)
 
+
+base['change_percent'] = base['close'].pct_change() * 100
+df_sorted['change_percent'] = df_sorted['close'].pct_change() * 100
+
+def CalculateDirection(df):
+    if df['change_percent'].mean() > 0:
+        tendencia = 'Bullish'
+    elif df['change_percent'].mean() < 0:
+        tendencia = 'Bearish'
+    else:
+        tendencia = 'None'
+
+    return tendencia
+
+# Imprimir resultados
+#print("La tendencia es: ", CalculateDirection(df_sorted))
+
 plt.figure(figsize=(14, 7))
 plt.subplot(1, 2, 1)
 plt.plot(df_sorted.index, df_sorted['close'], marker='*', linestyle='-', color='b')
